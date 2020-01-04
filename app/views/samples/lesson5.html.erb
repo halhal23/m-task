@@ -1,0 +1,11 @@
+<% @page_title = "lesson5" %>
+
+<div class="container">
+  <h1 class="bg-primary"><%= @date.strftime("%Y/%m/%d(%a) %H:%M:%S") %></h1>
+  <h1><%= tiny_format(@message) %></h1>
+  
+  <%= content_tag(:h2, class: "hello-p") do  %>
+  これはh2タグです
+  <% end %>
+</div>
+

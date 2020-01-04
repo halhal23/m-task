@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    models:
+      user
+    attributes:
+      user:
+        name: ユーザ名
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード（確認）
+        current_password: 現在のパスワード
+    errors:
+      message:
+        wrong: 現在のパスワードが違います
+        empty: 現在のパスワードを入力してください

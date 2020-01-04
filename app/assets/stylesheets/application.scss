@@ -10,39 +10,24 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
  */
-body,ul {
+ @import 'bootstrap';
+ @import 'header';
+ @import 'users_card';
+ @import 'form';
+ @import 'flash';
+ @import 'error';
+ @import 'top';
+
+body {
   margin: 0;
-}
-header{
-  background: #ccc;
-}
-
-.sample-ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 0;
   list-style: none;
+  text-decoration: none;
 }
 
-.sample-li {
-  width: 70px;
-  height: 50px;
-  border-left: 1px solid black;
-  line-height: 50px;
+.center-title {
   text-align: center;
-  transition: .5s;
-}
-
-.sample-li:nth-child(5) {
-  border-right: 1px solid black;
-}
-
-.sample-li:hover {
-  background: black;
-  color: white;
 }
 
 

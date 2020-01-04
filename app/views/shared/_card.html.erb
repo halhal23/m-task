@@ -1,0 +1,13 @@
+<div class="card-container">
+  <% @users.each do |user| %>
+    <div class="card">
+      <div class="sliderText">
+        <h3><%= user.name %></h3>
+      </div>
+      <div class="card-content">
+        <p><%= user.email %></p>
+        <%= link_to "Show More", user %>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,30 @@
+
+<header>
+  <nav class="container header-container">
+    <div class="logo-wrapper">
+      <p class="logo-text">
+        <a href="/">Ebbing<span>Haus</span></a>
+      </p>
+    </div>
+    <ul class="header-ul">
+      <% if current_user %>
+        <li class="header-li">
+          <%= link_to current_user.name, :account %>
+        </li>
+        <li class="header-li">
+          <%= link_to "ログアウト", session_path(current_user), method: :delete, data: { confirm: "ログアウトしますか？" } %>
+        </li>
+      <% else %>
+        <li class="header-li">
+        <%= link_to "Login", "/login" %>
+        </li>
+        <li class="header-li">
+        <%= link_to "SignUp", new_user_path %>
+        </li>
+      <% end %>
+      <li class="header-li">
+        <%= link_to "Contact", "#" %>
+      </li>
+    </ul>
+  </nav>
+</header>

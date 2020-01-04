@@ -21,4 +21,9 @@ class SamplesController < ApplicationController
   def lesson4
     render plain: "console.log(#{flash[:notice]})"
   end
+
+  def lesson5
+    @date = Time.current
+    @message = "明けましておめでとう。\nこれからもよろしくね。"
+  end
 end

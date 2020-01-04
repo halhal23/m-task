@@ -1,0 +1,10 @@
+<div class="form-wrapper">
+  <% if flash.alert.present? %><p class="alert"><%= flash.alert %></p><% end %>
+
+  <%= form_tag :session, id: "login_form" do %>
+    <%= text_field_tag :name, params[:name], class: "form-control text-input", placeholder: "Name" %>
+    <%= password_field_tag :password, params[:password], class: "form-control text-input", placeholder: "Password" %>
+    <%= password_field_tag :password_confirmation, params[:password_confirmation], class: "form-control text-input", placeholder: "Passoword_confirmation" %>
+    <%= submit_tag "Login", class: "btn btn-outline-primary" %>
+  <% end %>
+</div>
